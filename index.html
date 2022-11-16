@@ -292,8 +292,8 @@
             crossDomain: true,
             data: JSON.stringify(data),
             dataType: "json",
-            headers: {
-            "Access-Control-Allow-Origin": "*"
+            beforeSend: function(xhr){
+            xhr.setRequestHeader('CORS', 'Access-Control-Allow-Origin');
             }
         });
         })
