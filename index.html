@@ -291,7 +291,10 @@
             type: "POST",
             crossDomain: true,
             data: JSON.stringify(data),
-            dataType: "json"
+            dataType: "json",
+            headers: {
+            "Access-Control-Allow-Origin": "*"
+            }
         });
         })
     });
