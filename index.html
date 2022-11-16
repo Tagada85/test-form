@@ -286,8 +286,13 @@
                 "creneau_preaudit": $('#dispo-preaudit').val(),
                 "addresses": JSON.stringify(addresses)
             }
-
-           $.post( "https://hooks.airtable.com/workflows/v1/genericWebhook/appwhjYo1bpkCy82c/wflSMrMqCZ2M3UJii/wtr8y3O585lDTqCdx", data);
+        $.ajax({
+            url: "https://hooks.airtable.com/workflows/v1/genericWebhook/appwhjYo1bpkCy82c/wflSMrMqCZ2M3UJii/wtr8y3O585lDTqCdx",
+            type: "POST",
+            crossDomain: true,
+            data: JSON.stringify(data),
+            dataType: "json"
+        });
         })
     });
 </script>
