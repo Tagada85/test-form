@@ -291,7 +291,7 @@
             type: "POST",
             crossDomain: true,
             data: JSON.stringify(data),
-            dataType: "json",
+            dataType: "jsonp",
             beforeSend: function(xhr){
             xhr.setRequestHeader('CORS', 'Access-Control-Allow-Origin');
             }
