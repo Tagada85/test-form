@@ -286,17 +286,15 @@
                 "creneau_preaudit": $('#dispo-preaudit').val(),
                 "addresses": JSON.stringify(addresses)
             }
-        $.ajax({
-            url: "https://hooks.airtable.com/workflows/v1/genericWebhook/appwhjYo1bpkCy82c/wflSMrMqCZ2M3UJii/wtr8y3O585lDTqCdx",
-            type: "POST",
-            crossDomain: true,
-            data: JSON.stringify(data),
-            dataType: "jsonp",
-            beforeSend: function(xhr){
-            xhr.setRequestHeader('CORS', 'Access-Control-Allow-Origin');
-                xhr.setRequestHeader('Content-Type','application/json');
-            }
-        });
+            
+            fetch('https://hooks.airtable.com/workflows/v1/genericWebhook/appwhjYo1bpkCy82c/wflSMrMqCZ2M3UJii/wtr8y3O585lDTqCdx', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+                body: JSON.stringify(data)
+            })
         })
     });
 </script>
