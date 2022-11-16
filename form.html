@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire ISO 9001</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container text-center">
+    <h1>Formulaire Demande ISO 9001</h1>
+</div>
+<form>
+    <div class="container text-center">
+        <div>
+            <div class="form-group">
+                <label for="nom-entreprise">Nom de l'entreprise</label>
+                <input type="text" class="form-control" id="nom-entreprise" name="nom-entreprise" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Siret">Siret</label>
+                <input type="text" class="form-control" id="Siret" name="Siret"  placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Code-naf">Code NAF</label>
+                <input type="text" class="form-control" id="Code-naf"  name="Code-naf" placeholder="" required>
+            </div>
+
+            <div>
+                <label>Demande pré-audit</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Oui" id="Oui">
+                    <label class="form-check-label" for="Oui">
+                        Oui
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Non" id="Non" checked>
+                    <label class="form-check-label" for="Non">
+                        Non
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label>Disponibilité début / fin de pré-audit</label>
+                <select id="dispo-preaudit" class="form-select" aria-label="Default select example" required>
+                    <option selected>11/2022</option>
+                    <option value="1">12/2022</option>
+                    <option value="2">01/2023</option>
+                </select>
+            </div>
+
+
+            <div id="Sites">
+                <label>Sites</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Mono-site" id="Mono-site" value="Mono-site">
+                    <label class="form-check-label" for="Mono-site">
+                        Mono-site
+                    </label>
+                </div>
+                <div class="form-check" >
+                    <input class="form-check-input" type="radio" name="Multi-site" id="Multi-sites" value="Multi-sites">
+                    <label class="form-check-label" for="Multi-sites">
+                        Multi-sites
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Nombre-sites">Nombre de sites</label>
+                <input type="number" class="form-control" id="Nombre-sites" name="Nombre-sites" placeholder="" required>
+            </div>
+            <div id="Adresse_siege_social">
+                <div class="form-group">
+                    <label for="Adresse_site_1">Adresse du siège social</label>
+                    <input type="text" class="form-control" id="Adresse_site_1" name="Adresse_site_1"  placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="Complement_adresse_site_1">Complément d'adresse du siège social</label>
+                    <input type="text" class="form-control" id="Complement_adresse_site_1" name="Complement_adresse_site_1" placeholder="" >
+                </div>
+                <div class="form-group">
+                    <label for="Code_postal_site_1">Code postal du siège social</label>
+                    <input type="text" class="form-control" id="Code_postal_site_1"  name="Code_postal_site_1" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label for="Ville_site_1">Ville du siège social</label>
+                    <input type="text" class="form-control" id="Ville_site_1" name="Ville_site_1"  placeholder="" required>
+                </div>
+            </div>
+
+            <div id="Adresses">
+
+            </div>
+
+            <button id="AddAdresse" class="btn btn-primary" type="button">Ajouter site</button>
+
+
+
+
+            <div class="form-group">
+                <label for="Nom_signataire">Nom du signataire</label>
+                <input type="text" class="form-control" id="Nom_signataire" name="Nom_signataire" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Prenom_signataire">Prénom du signataire</label>
+                <input type="text" class="form-control" id="Prenom_signataire" name="Prenom_signataire"  placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Fonction_signataire">Fonction du signataire</label>
+                <input type="text" class="form-control" id="Fonction_signataire" name="Fonction_signataire" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Email_signataire">Email du signataire</label>
+                <input type="email" class="form-control" id="Email_signataire"  name="Email_signataire"aria-describedby="emailHelp" placeholder="" required>
+            </div>
+            <div>
+                <label for="telephone_signataire">Téléphone du signataire</label>
+
+                <input type="tel" id="telephone_signataire" name="telephone_signataire"
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="Secteur_activite">Secteur d'activité</label>
+                <input type="text" class="form-control" id="Secteur_activite" name="Secteur_activite"  placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Nombre_salaries">Nombre de salariés</label>
+                <input type="number" class="form-control" id="Nombre_salaries" name="Nombre_salaries" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Nombre_salaries_etp">Nombre de salariés (équivalent temps plein)</label>
+                <input type="number" class="form-control" id="Nombre_salaries_etp" name="Nombre_salaries_etp" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Ca">Chiffre d'affaires</label>
+                <input type="number" class="form-control" id="Ca" name="Ca"  placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Perimetre_certification">Périmètre de certification ( activité à certifier )</label>
+                <input type="text" class="form-control" id="Perimetre_certification" name="Perimetre_certification" placeholder="" required>
+            </div>
+
+            <div>
+                <label>Disponibilité début / fin d'audit</label>
+                <select id="dispo-audit" class="form-select" aria-label="Default select example" required>
+                    <option selected>11/2022</option>
+                    <option value="1">12/2022</option>
+                    <option value="2">01/2023</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Nom_responsable_audit">Nom du responsable de l'audit</label>
+                <input type="text" class="form-control" id="Nom_responsable_audit" name="Nom_responsable_audit"  placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Prenom_responsable_audit">Prénom du responsable de l'audit</label>
+                <input type="text" class="form-control" id="Prenom_responsable_audit" name="Prenom_responsable_audit" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Fonction_responsable_audit">Fonction du responsable de l'audit</label>
+                <input type="text" class="form-control" id="Fonction_responsable_audit" name="Fonction_responsable_audit" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <label for="Email_responsable_audit">Email du responsable de l'audit</label>
+                <input type="email" class="form-control" id="Email_responsable_audit" name="Email_responsable_audit" aria-describedby="emailHelp" placeholder="" required>
+            </div>
+            <div>
+                <label for="telephone_responsable_audit">Téléphone du responsable de l'audit</label>
+
+                <input type="tel" id="telephone_responsable_audit" name="telephone_responsable_audit"
+                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submit">Envoyer</button>
+        </div>
+    </div>
+</form>
+
+<section id="Reference" style="display: none">
+    <div id="Adresse-container" class="adresse-container">
+        <div class="form-group">
+            <label for="Adresse_site_">Adresse du site </label>
+            <input type="text" class="form-control" name="Adresse_site_" id="Adresse_site_"  placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="Complement_adresse_site_">Complément d'adresse du site </label>
+            <input type="text" class="form-control" name="Complement_adresse_site_" id="Complement_adresse_site_"  placeholder="" >
+        </div>
+        <div class="form-group">
+            <label for="Code_postal_site_">Code postal du site </label>
+            <input type="text" class="form-control" name="Code_postal_site_" id="Code_postal_site_"  placeholder="" required>
+        </div>
+        <div class="form-group">
+            <label for="Ville_site_">Ville du site </label>
+            <input type="text" class="form-control" name="Ville_site_" id="Ville_site_"  placeholder="" required>
+        </div>
+        <div>
+            <button type="button" class="removeAdresse btn btn-primary" >Supprimer ce site</button>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).on("ready", function() {
+        let newAdresseIdIncrement = 1;
+
+        $('#Adresse_siege_social').hide();
+        $("#Sites input").on('change', function () {
+            if ($(this).val() == "Mono-site") {
+                $('#Adresse_siege_social').show();
+            } else {
+                $('#Adresse_siege_social').hide();
+            }
+        })
+
+        $("button#AddAdresse").on('click', function () {
+            const newAdresse = $('#Reference #Adresse-container').clone();
+
+            newAdresse.attr('id', $(this).attr('id') + newAdresseIdIncrement);
+
+            const labels = newAdresse.find('label');
+            const inputs = newAdresse.find('input');
+
+            labels.each(function() {
+                $(this).attr('for', $(this).attr('for') + newAdresseIdIncrement);
+            });
+
+            inputs.each(function() {
+                $(this).attr('id', $(this).attr('id') + newAdresseIdIncrement);
+                $(this).attr('name', $(this).attr('name') + newAdresseIdIncrement);
+            });
+
+            newAdresse.appendTo("#Adresses");
+            newAdresseIdIncrement++;
+        });
+
+        $("body").on('click', '.removeAdresse', function () {
+            $(this).closest('.adresse-container').remove();
+        });
+
+        $('#submit').on('click', function(){
+            let addresses = []
+            const addressesElements = $("#Adresses .adresse-container").each(function(index) {
+                const inputs = $(this).find('input[type="text"]');
+
+                addresses.push({
+                    "Adresse": inputs.first().val(),
+                    "Complement_adresse": inputs.eq(1).val(),
+                    "Code_Postal": inputs.eq(2).val(),
+                    "Ville": inputs.last().val()
+                })
+            })
+
+
+            let data = {
+                "Nom_entreprise": $('#nom-entreprise').val(),
+                "Nombre_sites": $('#Nombre-sites').val(),
+                "siret": $('#Siret').val(),
+                "code_NAF": $('#Code-naf').val(),
+                "Nom_Signataire": $('#Nom_signataire').val(),
+                "Prenom_Signataire": $('#Prenom_signataire').val(),
+                "Fonction_Signataire": $('#Fonction_signataire').val(),
+                "Email_Signataire": $('#Email_signataire').val(),
+                "Telephone_Signataire": $('#telephone_signataire').val(),
+                "Secteur_activite": $('#Secteur_activite').val(),
+                "Nombre_salaries": $('#Nombre_salaries').val(),
+                "Nombre_salaries_ETPCA": $('#Nombre_salaries_etp').val(),
+                "Ca": $("#Ca").val(),
+                "Perimetre_certification": $("#Perimetre_certification").val(),
+                "Disponibilite_audit": $("#dispo-audit").val(),
+                "Nom_contact_audit": $("#Nom_responsable_audit").val(),
+                "Prenom_contact_audit": $("#Prenom_responsable_audit").val(),
+                "Fonction_contact_audit": $("#Fonction_responsable_audit").val(),
+                "Email_contact_audit": $("#Email_responsable_audit").val(),
+                "Telephone_contact_audit": $("#telephone_responsable_audit").val(),
+                "preaudit": $('#Oui').is(':checked') ? 'Oui' : 'Non',
+                "creneau_preaudit": $('#dispo-preaudit').val(),
+                "addresses": JSON.stringify(addresses)
+            }
+
+           $.post( "https://hooks.airtable.com/workflows/v1/genericWebhook/appwhjYo1bpkCy82c/wflSMrMqCZ2M3UJii/wtr8y3O585lDTqCdx", data);
+        })
+    });
+</script>
